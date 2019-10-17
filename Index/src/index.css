@@ -1,5 +1,6 @@
+@import  '~antd/dist/antd.css'; 
 #root{
-    width:1000px;
+   /* background-color:	#6495ED ; */
   
    
 }

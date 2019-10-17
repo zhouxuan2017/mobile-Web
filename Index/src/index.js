@@ -4,13 +4,50 @@ import './index.css';
 import {ShowTime} from './ShowTime';
 import Todolist from './Todolist/Todolist'
 import Request from './Request'
+import Parent from './Context/Parent'
+import Hoc from './Hoc/Hoc'
+import Portals from'./Portal/Portals'
+import ParentPortal from './Portal/ParentPortal'
+import App from './App'
+
+
 // var str='hello';
 // var ele=<h1>{str}</h1>
 //ReactDOM.render(<Request/>,document.getElementById('root'));
 
+//App
+import {con} from './Context/Context';
+let color='red';
+ReactDOM.render(<con.Provider value={color}><App/></con.Provider>,document.getElementById('root'));
 
 
-ReactDOM.render(<Todolist/>,document.getElementById('root'));
+
+//ParentPortal
+// import {con} from './Context/Context';
+// let color='red';
+// ReactDOM.render(<con.Provider value={color}><ParentPortal/></con.Provider>,document.getElementById('root'));
+
+
+//Portals
+// import {con} from './Context/Context';
+// let color='red';
+// ReactDOM.render(<con.Provider value={color}><Portals/></con.Provider>,document.getElementById('root'));
+
+//Hoc
+
+// import {con} from './Context/Context';
+// let color='red';
+// ReactDOM.render(<con.Provider value={color}><Hoc/></con.Provider>,document.getElementById('root'));
+
+
+//Context
+////let {Provider,Consumer}=React.createContext();
+// import {con} from './Context/Context';
+// let color='red';
+// ReactDOM.render(<con.Provider value={color}><Parent/></con.Provider>,document.getElementById('root'));
+
+
+//ReactDOM.render(<Todolist/>,document.getElementById('root'));
 //组件交互
 //父组件--->子组件：调用时在子组件上添加属性
 //在子组件中通过props获取数据
@@ -84,18 +121,18 @@ setInterval(tick,1000);*/
 //var ele=React.createElement('div',{'id':'box'},'hello',React.createElement('h1',{'id':'h'},'react'))
 
 
-var obj={type:'div',props:{
-    id:'box',
-    class:'box-box',
-    children:['hello',{
-        type:'h1',
-        props:{
-            id:'h',
-            class:'h-h',
-            children:['react']
-        }
-    }],
-}}
+// var obj={type:'div',props:{
+//     id:'box',
+//     class:'box-box',
+//     children:['hello',{
+//         type:'h1',
+//         props:{
+//             id:'h',
+//             class:'h-h',
+//             children:['react']
+//         }
+//     }],
+// }}
 
 // var str='<h1>hello</h1>'+'';
 // ele.innerHTML=str;
@@ -139,33 +176,33 @@ document.body.innerHTML=str;
 console.timeEnd('a'); */
 
 //文档碎片的概念  自己声明render函数，实现页面渲染
-function render(obj,container){
-    var {type,props}=obj;
-    //文档碎片
-    var fr=document.createDocumentFragment();
-    document.createDocumentFragment()
-    var ele=document.createElement(type);
-    for(var item in props){
-        if(item==='class'){
-            ele.className=props[item];
-        }else if(item==='children'){
-           for(var i=0;i<props[item].length;i++){
-              if(typeof props[item][i]==='object'){
-                  render(props[item][i],ele);
-              }
-              else{
-                var txt=document.createTextNode(props[item][i]);
-                ele.appendChild(txt);
-              }
-           }
-        }else{
-      ele[item]=props[item];
-        }
-    }
-    fr.appendChild(ele);
-    container.appendChild(fr);
-}
-render(obj,document.getElementById('root'));
+// function render(obj,container){
+//     var {type,props}=obj;
+//     //文档碎片
+//     var fr=document.createDocumentFragment();
+//     document.createDocumentFragment()
+//     var ele=document.createElement(type);
+//     for(var item in props){
+//         if(item==='class'){
+//             ele.className=props[item];
+//         }else if(item==='children'){
+//            for(var i=0;i<props[item].length;i++){
+//               if(typeof props[item][i]==='object'){
+//                   render(props[item][i],ele);
+//               }
+//               else{
+//                 var txt=document.createTextNode(props[item][i]);
+//                 ele.appendChild(txt);
+//               }
+//            }
+//         }else{
+//       ele[item]=props[item];
+//         }
+//     }
+//     fr.appendChild(ele);
+//     container.appendChild(fr);
+// }
+// render(obj,document.getElementById('root'));
 //var e=<h1>hello</h1>;转换成一个对象
 //ReactDOM.render(ele, document.getElementById('root'));
 
