@@ -6,8 +6,8 @@ export default class Todolist extends Component {
     constructor() {
         super();
         this.state = {
-            todo: JSON.parse(localStorage.getItem('key',this.state))==''?[]:JSON.parse(localStorage.getItem('key',this.state)),
-            todo1: JSON.parse(localStorage.getItem('key1',this.state))==''?[]:JSON.parse(localStorage.getItem('key1',this.state)),
+            todo: JSON.parse(localStorage.getItem('key',this.state))==''?[1]:JSON.parse(localStorage.getItem('key',this.state)),
+            todo1: JSON.parse(localStorage.getItem('key1',this.state))==''?[2]:JSON.parse(localStorage.getItem('key1',this.state)),
       }
     }
     addItem = (msg) => {
