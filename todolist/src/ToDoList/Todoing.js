@@ -8,7 +8,7 @@ export default class Todoing extends Component {
             <div id='root1' style={{ height: '900px' }}>
                 
                 <div style={{ height: '60px', width: '650px' }}>
-                    <h2>正在进行</h2><span>{this.props.todo.length==''?0:this.props.todo.length}</span>
+                    <h2>正在进行</h2><span>{this.props.todo.map==''?0:this.props.todo.length}</span>
 
                 </div>
                 <ol className="demo-box" >
@@ -29,7 +29,7 @@ export default class Todoing extends Component {
                         <div style={{ width: '600px', height: '35px', backgroundColor: '#C0C0C0', marginTop: '15px', borderLeft: '5px 	#999 solid' }}>
                             <li key={idx1}><input type='checkbox' checked name='' id='check' onClick={() => { this.props.addtodo1(idx1) }} />{item1}</li>
                             <Icon type="smile" style={{float:'right',marginTop:'-25px',marginRight:'60px'}}></Icon>
-                            <button onClick={()=>this.props.del(idx1)} style={{float:'right',marginTop:'-30px'}}>删除</button>
+                            <button onClick={()=>this.props.del1(idx1)} style={{float:'right',marginTop:'-30px'}}>删除</button>
                         </div>
                     )}
                 </ol>

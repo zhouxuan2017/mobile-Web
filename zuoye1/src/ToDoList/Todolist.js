@@ -6,9 +6,9 @@ export default class Todolist extends Component {
     constructor() {
         super();
         this.state = {
-            todo: JSON.parse(localStorage.getItem('key',this.state))==''?[1]:JSON.parse(localStorage.getItem('key',this.state)),
-            todo1: JSON.parse(localStorage.getItem('key1',this.state))==''?[2]:JSON.parse(localStorage.getItem('key1',this.state)),
-      }
+            todo: JSON.parse(localStorage.getItem('key', this.state)) == '' ? [] : JSON.parse(localStorage.getItem('key', this.state)),
+            todo1: JSON.parse(localStorage.getItem('key1', this.state)) == '' ? [] : JSON.parse(localStorage.getItem('key1', this.state)),
+        }
     }
     addItem = (msg) => {
         var todo = this.state.todo;
@@ -35,17 +35,22 @@ export default class Todolist extends Component {
             localStorage.setItem('key1', JSON.stringify(this.state.todo1))
         })
     };
-    del=(b)=>{
-        var todo=[...this.state.todo];
-        var todo1=[...this.state.todo1];
-        todo.splice(b,1);
-        todo1.splice(b,1);
+    del = (b) => {
+        var todo = [...this.state.todo];
+
+        todo.splice(b, 1);
+
         this.setState({
-            todo:todo
-        },()=>{localStorage.setItem('key',JSON.stringify(this.state.todo))})
+            todo: todo
+        }, () => { localStorage.setItem('key', JSON.stringify(this.state.todo)) })
+
+    }
+    del1 = (b) => {
+        var todo1 = [...this.state.todo1];
+        todo1.splice(b, 1);
         this.setState({
-            todo1:todo1
-        },()=>{localStorage.setItem('key1',JSON.stringify(this.state.todo1))})
+            todo1: todo1
+        }, () => { localStorage.setItem('key1', JSON.stringify(this.state.todo1)) })
     }
     delItem = (a) => {
         var todo = [...this.state.todo];
@@ -69,7 +74,7 @@ export default class Todolist extends Component {
         return (
             <div>
                 <Todoinput addTodo={this.addItem} />
-                <Todoing todo={this.state.todo} delTodo={this.delItem} todo1={this.state.todo1} addtodo1={this.addTodo1} del={this.del}/>
+                <Todoing todo={this.state.todo} delTodo={this.delItem} todo1={this.state.todo1} addtodo1={this.addTodo1} del={this.del} del1={this.del1} />
             </div>
         )
     }
