@@ -8,7 +8,7 @@ export default class Todoing extends Component {
             <div id='root1' style={{ height: '900px' }}>
                 
                 <div style={{ height: '60px', width: '650px' }}>
-                    <h2>正在进行</h2><span>{this.props.todo.length}</span>
+                    <h2>正在进行</h2><span>{this.props.todo.length==''?0:this.props.todo.length}</span>
 
                 </div>
                 <ol className="demo-box" >
@@ -22,7 +22,7 @@ export default class Todoing extends Component {
                     )}
                 </ol>
                 <div style={{ height: '60px', width: '650px' }}>
-                    <h2>已经完成</h2><span>{this.props.todo1.length}</span>
+                    <h2>已经完成</h2><span>{this.props.todo1.length==''?0:this.props.todo1.length}</span>
                 </div>
                 <ol className="demo-box">
                     {this.props.todo1.map((item1, idx1) =>
