@@ -1,0 +1,295 @@
+@import  '~antd/dist/antd.css'; 
+
+*{
+   padding:0;
+   margin:0;
+}
+ul,li{
+   list-style:none;
+}
+body{
+  background-color: #ddd;
+}
+.body1{
+  height: 1900px;
+
+}
+/*header*/
+.headerwrap{
+  height: 50px;
+  background-color: #333;
+}
+.headerwrap header{
+  width:1200px;
+  margin: 0 auto;
+}
+.headerwrap img{
+  margin-top: 10px;
+  width: 120px;
+}
+.headerwrap a{
+  margin: 0 20px;
+  color: #fff;
+}
+.navbar-search {
+  position: relative;
+}
+.search-query:hover {
+  background-color: #555;
+}
+.search-query
+{
+  margin-left: 20px;
+  background: #555;
+  border: 1px solid #555;
+}
+
+
+#search_form{
+  width: 200px;
+  background: #555;
+
+  border-radius: 15px;
+}
+#search_form img{
+  height: 15px;
+  width: 15px;
+  background-color: #555;
+}
+/*main*/
+.main{
+  width: 1200px;
+  margin: 30px auto;
+}
+
+.content{
+  width: 900px;
+  float: left;
+
+
+background-color: white;
+}
+.slider{
+  width: 270px;
+  height: 500px;
+  float: left;
+
+}
+/*Slider*/
+.panel {
+  margin-bottom: 13px;
+  background-color: white;
+  margin-left: 20px;
+  width: 280px;
+  height: 120px;
+}
+
+.panel .inner {
+  padding: 10px;
+  border-radius: 0 0 3px 3px;
+}
+.panel .inner p{
+  color: black;
+}
+.panel .inner1 {
+  margin-left: 10px;
+  margin-top: -12px;
+  border-radius: 0 0 3px 3px;
+}
+.panel .inner1 a {
+  color: #778087;
+}
+.span-info {
+  display: inline-block;
+  float: none;
+  padding: 3px 10px;
+  border: none;
+  margin: 0;
+  font-size: 14px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 2px;
+  box-shadow: none;
+  border-radius: 3px;
+  line-height: 2em;
+  vertical-align: middle;
+  color: #fff;
+  background-color: #5bc0de;
+  margin-top: 8px;
+}
+.panel2{
+  margin-bottom: 13px;
+  background-color: white;
+  margin-left: 20px;
+  width: 280px;
+  height: 230px;
+}
+.panel2 img{
+  width: 260px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.panel3{
+  margin-bottom: 13px;
+  background-color: white;
+  margin-left: 20px;
+  width: 280px;
+  height: 200px;
+}
+.header1 {
+  color: #51585c;
+  border-radius: 3px 3px 0 0;
+  height: 40px;
+  background-color:  #f6f6f6;
+  padding-left: 10px;
+  padding-top: 10px;
+  
+}
+.header .col_fade {
+  color: #444;
+}
+.unstyled{
+  margin: 0 0 25px 10px; 
+
+}
+.unstyled li{
+  margin-top: 7px;
+  overflow: hidden;
+}
+.unstyled li a{
+  color:#778087 ;
+}
+.panel4{
+  margin-bottom: 13px;
+  background-color: white;
+  margin-left: 20px;
+  width: 280px;
+  height: 290px;
+}
+.panel4 .inner li{
+  margin-left: 10px;
+}
+.user_name {
+  max-width: 120px;
+  white-space: nowrap;
+  display: inline-block;
+  vertical-align: middle;
+}
+.user_name a{
+  color: gray;
+}
+.top_score {
+  color: gray;
+  padding: 2px;
+  margin-right: 10px;
+}
+.friendship-community img{
+  width: 180px;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 50px;
+}
+.cnode-app-download img{
+  margin-left: 35px;
+}
+.a{
+  width:100px;
+  height: 20px;
+  float: left;
+  margin-left: 80px;
+}
+.a a{
+  color: gray;
+}
+/*footer*/
+.zong
+{
+ 
+  height: 210px;
+  background-color:white;
+}
+.footer
+{
+  background-color:white;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+/*Home*/
+.homewrap{
+  height: 30px;
+  background-color:#f6f6f6;;
+}
+.headerwrap header{
+  width:1200px;
+  margin: 0 auto;
+}
+.homewrap a{
+  margin: 0 30px;
+  padding-top: 40px;
+  color: #80bd01;
+}
+.homewrap a:hover{
+  color: #08c;
+}
+
+.homeli li
+{
+ 
+  display: inline;
+ 
+}
+/*all*/
+.all li{
+  display: inline;
+}
+/*start*/
+.start a{
+  color: #08c;
+  padding-top: 60px;
+  margin-top: 40px;
+}
+.start h3{ 
+  font-weight: bolder;
+  padding-top: 40px;
+}
+.start h1{ 
+
+  padding-top: 40px;
+}
+.start p{
+  color: black;
+  padding-top: 30px;
+}
+.start img{
+  width: 250px;
+    height: 60px;
+    margin-top: 30px;
+}
+.start1 h1 h2{
+  font-weight: bolder;
+  line-height: 1px;
+}
+.start1 li
+{
+  list-style: disc;
+  color: black;
+  margin-left: 30px;
+}
+/*signin*/
+.pass{
+  margin-top: 20px;
+  width: 270px;
+  height: 30px;
+}
+.btn{
+  height: 40px;
+  width: 100px;
+  margin-top: 30px;
+  margin-left: 150px;
+  background-color:#08c;
+  
+}
+.btn a{
+  color: white;
+}
