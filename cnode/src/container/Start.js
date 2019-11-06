@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-
+import { Link,Route } from 'react-router-dom'
 export default class Start extends Component {
     render() {
         return (
           <div>
                 <div className='homewrap'>
-               <a href='/home/all'>主页 /</a><span>&nbsp;&nbsp;Node.js新手入门</span>
+                <Link to='/all=1'><a >主页 /</a></Link> <Link to='/Start'><span>&nbsp;&nbsp;Node.js新手入门</span></Link> 
              
             </div>
               <div className='start' style={{backgroundColor:'white',height:'1650px',paddingLeft:'20px'}}>

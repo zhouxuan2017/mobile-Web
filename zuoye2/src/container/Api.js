@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
-
+import { Link,Route } from 'react-router-dom'
 export default class Api extends Component {
     render() {
         return (
             <div>
                 <div className='homewrap'>
-                    <a href='/home/all'>关于 /</a><span>&nbsp;&nbsp;API</span>
+                <Link to='/all=1'><a >关于 /</a></Link> <Link to='/api'><span>&nbsp;&nbsp;API</span></Link> 
                 </div>
                 <div className='start1' style={{ backgroundColor: 'white', height: '1750px', paddingLeft: '20px' }}>
                     <p>以下 api 路径均以<a href=' https://cnodejs.org/api/v1'> https://cnodejs.org/api/v1</a> 为前缀</p>

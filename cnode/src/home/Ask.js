@@ -8,26 +8,21 @@ export default class All extends Component {
     constructor() {
         super();
         this.state = {
-            data: [],
-          
+            data: [],         
         }
-    }
-    
+    }    
     componentDidMount() {
         // console.log(window.location.search)
         //  let page1 = this.props.location.search;
         let page=this.props.match.params.page
         let url1=this.props.match.url.split('=')[0]
-        let url=url1.slice(1)
-      
+        let url=url1.slice(1)    
         fetch(`https://cnodejs.org/api/v1/topics?tab=${url}&page=${page}`)
         .then((res)=>res.json())
         .then((res)=>{
             this.setState({data:res.data});
         })
-
     }
-
     componentDidUpdate(prevProps, prevState) {
         //最初不执行   属性更新以后执行
         let page=this.props.match.params.page
@@ -39,9 +34,7 @@ export default class All extends Component {
         .then((res)=>{
             this.setState({data:res.data});
         })
-
     }
-
     render() {
         return (
             <div>
@@ -54,7 +47,7 @@ export default class All extends Component {
                                 <div style={{ width: '30px', float: 'left' ,backgroundColor:'#80bd01',height:'20px',color:'white'}} >问答</div>
                                 <Link to={'/topic'+item.id}>
                                     <div style={{ width: '600px', float: 'left', color: '#333', fontSize: '16px', overflow: 'hidden', whiteSpace: 'nowrap', textOverflow: 'ellipsis' }}>
-                                        <p>{item.title}</p>
+                                    <a style={{color:'black'}}>{item.title}</a>
                                     </div>
                                 </Link>
                                 <div style={{ width: '45px', float: 'left' }} ><img src={item.author.avatar_url} style={{ width: 25, height: 20 }}></img></div>
